@@ -15,9 +15,9 @@ require("@jlongyam/polyfill");
 
 ## Browser
 
-1. see `index.html` - example
-2. check `report.js` - checker
-3. check `include.js` - includer
+1. see `index.html`
+2. check `include.js`
+3. add or remove if needed
 
 ## Tested
 

@@ -9,7 +9,7 @@ npm install @jlongyam/polyfill
 ```
 
 ```js
-"use strict" // compability
+"use strict"
 require("@jlongyam/polyfill");
 ```
 

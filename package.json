@@ -1,8 +1,10 @@
 {
   "name": "@jlongyam/polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collection of polyfills, JS, HTML",
-  "keywords": ["polyfill"],
+  "keywords": [
+    "polyfill"
+  ],
   "author": "jlongyam",
   "license": "MIT",
   "repository": {

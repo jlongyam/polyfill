@@ -1,7 +1,14 @@
 # Polyfill
 
-Primary is javascrit polyfill 
+## Node
 
-> [!WARNING]
->
-> Under Develoment
+```js
+// clone
+require("../polyfill/require.js");
+// package
+require("@jlongyam/polyfill/require.js");
+```
+
+## Browser
+
+Check manually using `require.html`

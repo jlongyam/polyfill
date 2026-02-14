@@ -1,0 +1,14 @@
+{
+  "name": "@jlongyam/polyfill",
+  "version": "1.0.0",
+  "description": "Collection of polyfills, JS, HTML",
+  "keywords": ["polyfill"],
+  "author": "jlongyam",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlongyam/polyfill.git"
+  },
+  "homepage": "https://github.com/jlongyam/polyfill",
+  "main": "require.js"
+}

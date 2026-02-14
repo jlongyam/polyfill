@@ -1,0 +1,14 @@
+var polyfill = {};
+polyfill.script = function () { return document.scripts[document.scripts.length - 1] };
+polyfill.path = polyfill.script().getAttribute('src').replace('include.js', './');
+if (typeof Object.defineProperty !== 'function') document.write('<script src="' + polyfill.path + 'js/Object/defineProperty.js"><\/script>');
+if (!('keys' in Object)) document.write('<script src="' + polyfill.path + 'js/Object/keys.js"><\/script>');
+if (!('map' in Array.prototype)) document.write('<script src="' + polyfill.path + 'js/Array/map.js"><\/script>');
+if (!('indexOf' in Array.prototype)) document.write('<script src="' + polyfill.path + 'js/Array/indexOf.js"><\/script>');
+if (!('includes' in String.prototype)) document.write('<script src="' + polyfill.path + 'js/String/includes.js"><\/script>');
+if (typeof JSON !== 'object') document.write('<script src="' + polyfill.path + 'js/type/JSON.js"><\/script>');
+if (!('currentScript' in document)) document.write('<script src="' + polyfill.path + 'html/document/currentScript.js"><\/script>');
+if (!('head' in document)) document.write('<script src="' + polyfill.path + 'document/head.js"><\/script>');
+if (typeof Promise !== 'function') document.write('<script src="' + polyfill.path + 'js/type/Promise.js"><\/script>');
+if (typeof fetch !== 'function') document.write('<script src="' + polyfill.path + 'js/type/fetch.js"><\/script>');
+if (typeof console !== 'object') document.write('<script src="' + polyfill.path + 'js/type/console.js"><\/script>');

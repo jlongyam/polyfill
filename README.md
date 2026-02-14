@@ -11,4 +11,4 @@ require("@jlongyam/polyfill/require.js");
 
 ## Browser
 
-Check manually using `require.html`
+Check manually using `index.html`

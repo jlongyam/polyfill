@@ -1,15 +1,15 @@
 (function () {
   var MAX_LINES = 1000,
-      CONSOLE_CSS = '#SHIMCONSOLE { visibility: hidden; position: fixed; z-index: 9999; left: 0; right: 0; bottom: 0; height: 200px; border-top: solid 1px #808080; overflow: auto; word-wrap: break-word; padding: 5px; background-color: #eeeeee; color: #000000; font-family: monospace; font-size: 10pt; font-weight: normal; font-style: normal; }'
-        + '#SHIMCONSOLE .SHIMCONSOLE_GROUP { margin-left: 20px; }'
-        + '#SHIMCONSOLE .SHIMCONSOLE_ERROR { color: #ff0000; }'
-        + '#SHIMCONSOLE .SHIMCONSOLE_WARN { color: #ff8000; }'
-        + '#SHIMCONSOLE table { width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid gray; }'
-        + '#SHIMCONSOLE th { font-weight: normal; text-align: left; border: 1px solid gray; }'
-        + '#SHIMCONSOLE td { font-weight: normal; text-align: left; border: 1px gray; border-left: 1px solid gray;}'
-        + '#SHIMCONSOLE tr:nth-child(even) { background-color: white; }'
-        + '#SHIMCONSOLE tr:nth-child(odd) { background-color: #f0f0ff; }'
-        + '#SHIMCONSOLE tr:nth-child(1) { background-color: lightgray; }',
+      CONSOLE_CSS = '#CONSOLE { visibility: hidden; position: fixed; z-index: 9999; left: 0; right: 0; bottom: 0; height: 200px; border-top: solid 1px #808080; overflow: auto; word-wrap: break-word; padding: 5px; background-color: #eeeeee; color: #000000; font-family: monospace; font-size: 10pt; font-weight: normal; font-style: normal; }'
+        + '#CONSOLE .CONSOLE_GROUP { margin-left: 20px; }'
+        + '#CONSOLE .CONSOLE_ERROR { color: #ff0000; }'
+        + '#CONSOLE .CONSOLE_WARN { color: #ff8000; }'
+        + '#CONSOLE table { width: 100%; table-layout: fixed; border-collapse: collapse; border: 1px solid gray; }'
+        + '#CONSOLE th { font-weight: normal; text-align: left; border: 1px solid gray; }'
+        + '#CONSOLE td { font-weight: normal; text-align: left; border: 1px gray; border-left: 1px solid gray;}'
+        + '#CONSOLE tr:nth-child(even) { background-color: white; }'
+        + '#CONSOLE tr:nth-child(odd) { background-color: #f0f0ff; }'
+        + '#CONSOLE tr:nth-child(1) { background-color: lightgray; }',
       FORMAT_REGEXP = /([^%]|%([\-+0]*)(\d+)?(\.\d+)?([%sdilfox]))/g;
   function Console() {
     (function () {
@@ -25,7 +25,7 @@
     var times = {};
     var groups = [];
     display = document.createElement('div');
-    display.id = 'SHIMCONSOLE';
+    display.id = 'CONSOLE';
     try {
       document.body.appendChild(display);
     } 
@@ -79,7 +79,7 @@
       if (!args.length)
         return;
       var line = document.createElement('div');
-      line.className = 'SHIMCONSOLE_' + type;
+      line.className = 'CONSOLE_' + type;
       line.style.whiteSpace = 'pre';
       if (prefix)
           line.appendChild(document.createTextNode(prefix));
@@ -166,7 +166,7 @@
       name = (name || '');
       show(['>' + name], 'INFO');
       var div = document.createElement('div');
-      div.className = 'SHIMCONSOLE_GROUP';
+      div.className = 'CONSOLE_GROUP';
       var parent = groups.length ? groups[groups.length - 1] : display;
       parent.appendChild(div);
       groups.push(div);

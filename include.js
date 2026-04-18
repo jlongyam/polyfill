@@ -11,6 +11,7 @@ polyfill.require = {
   "Object.create": (!Object.create),
   "Object.getPrototypeOf": (!Object.getPrototypeOf),
   "Object.getOwnPropertyNames": (!Object.getOwnPropertyNames),
+  "Object.entries": (!Object.entries),
   "Array.indexOf": (!Array.prototype.indexOf),
   "Array.lastIndexOf": (!Array.prototype.lastIndexOf),
   "Array.isArray":  (typeof Array.isArray === 'undefined'),
@@ -40,6 +41,7 @@ if(polyfill.require["Object.defineProperties"]) document.write('<script src="' +
 if(polyfill.require["Object.create"]) document.write('<script src="' + polyfill.path + 'js/Object/create.js"><\/script>');
 if(polyfill.require["Object.getPrototypeOf"]) document.write('<script src="' + polyfill.path + 'js/Object/getPrototypeOf.js"><\/script>');
 if(polyfill.require["Object.getOwnPropertyNames"]) document.write('<script src="' + polyfill.path + 'js/Object/getOwnPropertyNames.js"><\/script>');
+if(polyfill.require["Object.entries"]) document.write('<script src="' + polyfill.path + 'js/Object/entries.js"><\/script>');
 if(polyfill.require["Array.indexOf"]) document.write('<script src="' + polyfill.path + 'js/Array/indexOf.js"><\/script>');
 if(polyfill.require["Array.lastIndexOf"]) document.write('<script src="' + polyfill.path + 'js/Array/lastIndexOf.js"><\/script>');
 if(polyfill.require["Array.isArray"]) document.write('<script src="' + polyfill.path + 'js/Array/isArray.js"><\/script>');

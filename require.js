@@ -8,6 +8,7 @@ polyfill.require = {
   "Object.create": (!Object.create),
   "Object.getPrototypeOf": (!Object.getPrototypeOf),
   "Object.getOwnPropertyNames": (!Object.getOwnPropertyNames),
+  "Object.entries": (!Object.entries),
   "Array.indexOf": (!Array.prototype.indexOf),
   "Array.lastIndexOf": (!Array.prototype.lastIndexOf),
   "Array.isArray":  (typeof Array.isArray === 'undefined'),
@@ -34,6 +35,7 @@ if(polyfill.require["Object.defineProperties"]) require(polyfill.path + 'js/Obje
 if(polyfill.require["Object.create"]) require(polyfill.path + 'js/Object/create.js');
 if(polyfill.require["Object.getPrototypeOf"]) require(polyfill.path + 'js/Object/getPrototypeOf.js');
 if(polyfill.require["Object.getOwnPropertyNames"]) require(polyfill.path + 'js/Object/getOwnPropertyNames.js');
+if(polyfill.require["Object.entries"]) require(polyfill.path + 'js/Object/entries.js');
 if(polyfill.require["Array.indexOf"]) require(polyfill.path + 'js/Array/indexOf.js');
 if(polyfill.require["Array.lastIndexOf"]) require(polyfill.path + 'js/Array/lastIndexOf.js');
 if(polyfill.require["Array.isArray"]) require(polyfill.path + 'js/Array/isArray.js');

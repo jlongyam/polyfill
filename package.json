@@ -1,5 +1,5 @@
 {
-  "name": "@jlongyam/polyfill",
+  "name": "nwtest",
   "version": "1.0.5",
   "description": "Collection of polyfills, JS, HTML",
   "keywords": [
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jlongyam/polyfill.git"
   },
   "homepage": "https://github.com/jlongyam/polyfill",
-  "main": "require.js",
+  "main": "index.html",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"

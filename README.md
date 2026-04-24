@@ -13,14 +13,15 @@ npm install @jlongyam/polyfill
 require("@jlongyam/polyfill");
 ```
 
-see `check.cjs`
+see example: `check.cjs`
 
 ## Browser
 
 1. include `polyfill.js` in head
-2. see example: `check.html`
+2. change `polyfill.path`
+3. see example: `check.html`
 
-## Usage
+## Load
 
 Add/Remove manually.
 

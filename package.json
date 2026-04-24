@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jlongyam/polyfill.git"
   },
   "homepage": "https://github.com/jlongyam/polyfill",
-  "main": "require.js",
+  "main": "check.html",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"

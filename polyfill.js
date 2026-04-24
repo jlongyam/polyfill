@@ -29,7 +29,14 @@ polyfill.require = {
   "Date.toISOString": (!Date.prototype.toISOString),
   "Function.bind": (!Function.prototype.bind),
   "Function.Promise": (typeof Promise !== "function"),
-  "Function.fetch": (typeof fetch !== 'function')
+  "Function.fetch": (typeof fetch !== 'function'),
+  "window.customElements": (!window.customElements), // // https://github.com/webcomponents
+  "window.MutationObserver": (!window.MutationObserver),
+  "window.Event": (!window.Event),
+  "window.MouseEvent": (!window.MouseEvent),
+  "Array.from": (!Array.from),
+  "Object.assign": (!Object.assign),
+  "Event.preventDefault": (!('preventDefault' in Event.prototype))
 };
 if(polyfill.require["document.head"]) document.write('<script src="' + polyfill.path + 'html/document/head.js"><\/script>');
 if(polyfill.require['Object.defineProperty']) document.write('<script src="' + polyfill.path + 'js/Object/defineProperty.js"><\/script>');
@@ -60,3 +67,10 @@ if(polyfill.require["Date.toISOString"]) document.write('<script src="' + polyfi
 if(polyfill.require["Function.bind"]) document.write('<script src="' + polyfill.path + 'js/Function/bind.js"><\/script>');
 if(polyfill.require["Function.Promise"])  document.write('<script src="' + polyfill.path + 'js/Function/bluebird.min.js"><\/script>');
 if(polyfill.require['Function.fetch']) document.write('<script src="' + polyfill.path + 'js/Function/fetch.umd.js"><\/script>');
+if(polyfill.require['window.customElements']) document.write('<script src="' + polyfill.path + 'html/window/webcomponents.js"><\/script>');
+if(polyfill.require['window.MutationObserver']) document.write('<script src="' + polyfill.path + 'html/window/mutationobserver.min.js"><\/script>');
+// window.Event -> html/window/webcomponents-platform.js
+// window.MouseEvent ^ 
+// Array.from ^ 
+// Object.assign ^ 
+// Event.preventDefault  -> html/window/webcomponents-platform.js

@@ -53,3 +53,6 @@ if(polyfill.require["Date.now"]) require(polyfill.path + 'js/Date/now.js');
 if(polyfill.require["Date.toISOString"]) require(polyfill.path + 'js/Date/toISOString.js');
 if(polyfill.require["Function.bind"]) require(polyfill.path + 'js/Function/bind.js');
 if(polyfill.require["Function.Promise"])  require(polyfill.path + 'js/Function/bluebird.min.js');
+// fetch
+
+module.exports = polyfill;

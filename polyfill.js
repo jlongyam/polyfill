@@ -30,13 +30,15 @@ polyfill.require = {
   "Function.bind": (!Function.prototype.bind),
   "Function.Promise": (typeof Promise !== "function"),
   "Function.fetch": (typeof fetch !== 'function'),
+  // require Set
   "window.customElements": (!window.customElements), // // https://github.com/webcomponents
   "window.MutationObserver": (!window.MutationObserver),
   "window.Event": (!window.Event),
   "window.MouseEvent": (!window.MouseEvent),
   "Array.from": (!Array.from),
   "Object.assign": (!Object.assign),
-  "Event.preventDefault": (!('preventDefault' in Event.prototype))
+  "Event.preventDefault": (!('preventDefault' in Event.prototype)),
+  "NodeList.forEach": (!NodeList.prototype.forEach)
 };
 if(polyfill.require["document.head"]) document.write('<script src="' + polyfill.path + 'html/document/head.js"><\/script>');
 if(polyfill.require['Object.defineProperty']) document.write('<script src="' + polyfill.path + 'js/Object/defineProperty.js"><\/script>');
@@ -74,3 +76,4 @@ if(polyfill.require['window.MutationObserver']) document.write('<script src="' +
 // Array.from ^ 
 // Object.assign ^ 
 // Event.preventDefault  -> html/window/webcomponents-platform.js
+if(polyfill.require['NodeList.forEach']) document.write('<script src="' + polyfill.path + 'html/window/NodeList.forEach.js"><\/script>');

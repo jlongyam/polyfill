@@ -30,7 +30,7 @@ polyfill.require = {
   "Function.bind": (!Function.prototype.bind),
   "Function.Promise": (typeof Promise !== "function"),
   "Function.fetch": (typeof fetch !== 'function'),
-  // require Set
+  // webcomponents require Set
   "window.customElements": (!window.customElements), // // https://github.com/webcomponents
   "window.MutationObserver": (!window.MutationObserver),
   "window.Event": (!window.Event),
